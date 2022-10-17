@@ -204,6 +204,30 @@ footer {
     font-size: 0.8rem;
 }
 
+@media (max-width: 540px){
+    header img {
+        width: 12%;
+    }
+
+    .ativoAside {
+        font-size: 0.85rem;
+        transform: translateX(65px);
+        }
+        main h2 {
+            font-size: 1rem;
+            line-height: 60px;
+            padding-bottom: 20px;
+        }
+}
+
+@media (max-width: 420px){
+    main {
+        padding: 20px;        
+    }
+}
+
+
+
 @media (max-width: 300px)
 {
     main h2 {
@@ -232,9 +256,3 @@ footer {
 
 }
 
-@media (max-width: 420px)
-{
-    main {
-        padding: 20px;        
-    }
-}
