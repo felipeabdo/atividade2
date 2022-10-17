@@ -13,4 +13,7 @@ function meuMenu() {
 
     var deslLogo = document.querySelector("#logo");
     deslLogo.classList.toggle("ativoLogo")
+
+    var abrirFooter = document.querySelector("footer");    
+    abrirFooter.classList.toggle("ativoFooter")
 }
