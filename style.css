@@ -31,6 +31,7 @@ header {
 
 header img {
     width: 15%;
+    transition: 0.25s ease;
 }
 
 #checkbox-menu {
@@ -44,7 +45,7 @@ label {
     height: 22px;
     width: 25px;
     cursor: pointer;
-    
+    transition: 0.25s ease;
 }
 
 label ul {
@@ -111,8 +112,17 @@ aside {
 
 .ativoMain {
     transform: translateX(30px);
-    width: 65vw;
-    
+    width: 67vw;    
+}
+
+.ativoMenu {
+    transform: translateX(-80px);
+    transition: 0.25s ease;
+}
+
+.ativoLogo {
+    transform: translateX(-170px);
+    transition: 0.25s ease;
 }
 
 aside ul {
