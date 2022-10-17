@@ -9,7 +9,7 @@
 
 body {
     background-color: #181062;
-    padding-top: 23px;
+    /* padding-top: 23px; */
 }
 
 .container {
@@ -99,12 +99,12 @@ aside {
     justify-content: center;
     background-color: #181062;
     transform: translateX(-150px);
-    /* z-index: 9999; */
+    width: 0;
     transition: .5s ease;
 }
 
 .ativoAside {
-    transform: translateX(0px);
+    transform: translateX(45px);
     display: flex;
     
 }
@@ -147,7 +147,7 @@ main {
     justify-content: space-around;
     align-items: center;
     width: 100vw;
-    transform: translateX(-90px);
+    transform: translateX(0px);
     transition: 0.5s ease;
     padding: 20px;
 }
