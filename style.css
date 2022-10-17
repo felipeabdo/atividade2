@@ -204,6 +204,21 @@ footer {
     font-size: 0.8rem;
 }
 
+@media (max-width: 768px){
+
+    aside {
+        transform: translateX(50px);
+    }    
+    main {
+        width: 60vh;
+    }
+    .container {
+        grid-template-areas: "header header" "aside main" "aside footer";        
+    }
+    
+}
+
+
 @media (max-width: 540px){
     header img {
         width: 12%;
