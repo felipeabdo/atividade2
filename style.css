@@ -95,33 +95,38 @@ label span:nth-child(3){
 aside {
     grid-area: aside;
     font-size: 0.6rem;
-    display: flex;
-    width: 100%;
+    display: flex;    
     justify-content: center;
     background-color: #181062;
     transform: translateX(-150px);
     width: 0;
-    transition: .5s ease;
+    transition: 0.5s ease;
 }
 
 .ativoAside {
     transform: translateX(45px);
     display: flex;
-    
+    transition: 0.5s ease;
 }
 
 .ativoMain {
     transform: translateX(30px);
-    width: 67vw;    
+    width: 67vw;   
+    transition: 0.5s ease;
 }
 
 .ativoMenu {
-    transform: translateX(-80px);
+    margin-left: 20px;
     transition: 0.25s ease;
 }
 
 .ativoLogo {
-    transform: translateX(-170px);
+    transition: 0.25s ease;
+}
+
+.ativoHeader {
+    justify-content: flex-start;
+    align-items: center;
     transition: 0.25s ease;
 }
 
@@ -129,7 +134,7 @@ aside ul {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin:23px 0 0 12px;
+    margin:32px 0 0 12px;
 }
 
 aside a {
@@ -159,14 +164,13 @@ main {
     width: 100vw;
     transform: translateX(0px);
     transition: 0.5s ease;
-    padding: 20px;
+    padding: 00px;
 }
 
 
 main h2 {
 text-align: center;
 font-size: 0.75rem;
-line-height: 60px;
 }
 
 main .container-box {
@@ -193,4 +197,44 @@ main .box {
 footer {
     grid-area: footer;
     background-color: black;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 300px)
+{
+    main h2 {
+        text-align: center;
+        font-size: 0.65rem;
+        line-height: 20px;
+        padding-bottom: 20px;
+    }
+
+    main {
+        padding: 20px;        
+    }
+
+        .ativoMain {
+            width: 64vw;   
+    }
+
+    .ativoAside {
+    font-size: 0.5rem;
+    transform: translateX(37px);
+    }
+
+    aside ul {
+    margin:23px 0 0 12px;
+    }
+
+}
+
+@media (max-width: 420px)
+{
+    main {
+        padding: 20px;        
+    }
 }

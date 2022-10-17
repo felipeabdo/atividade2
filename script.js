@@ -5,6 +5,9 @@ function meuMenu() {
     var abrirMain = document.querySelector("main");    
     abrirMain.classList.toggle("ativoMain")
 
+    var deslHeader = document.querySelector("header");
+    deslHeader.classList.toggle("ativoHeader")
+
     var deslMenu = document.querySelector("label");
     deslMenu.classList.toggle("ativoMenu")
 
