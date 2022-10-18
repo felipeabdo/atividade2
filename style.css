@@ -16,7 +16,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 3fr;
     grid-template-rows: 10vh 85vh 5vh;
-    grid-template-areas: "header header" "aside main" "footer footer";
+    grid-template-areas: "header header" "aside main" "aside footer";
     
 }
 
@@ -30,7 +30,7 @@ header {
 }
 
 header img {
-    width: 15%;
+    width: 3%;
     transition: 0.25s ease;
 }
 
@@ -41,7 +41,7 @@ header img {
 
 label {
     position: relative;
-    display: block;
+    display: none;
     height: 22px;
     width: 25px;
     cursor: pointer;
@@ -98,9 +98,8 @@ aside {
     display: flex;    
     justify-content: center;
     background-color: #181062;
-    transform: translateX(-150px);
-    width: 0;
-    transition: 0.5s ease;
+    transform: translateX(0px);
+    width: 150px;
 }
 
 .ativoAside {
@@ -161,16 +160,15 @@ main {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    width: 100vw;
+    width: 90vw;
     transform: translateX(0px);
     transition: 0.5s ease;
-    padding: 00px;
-}
+    }
 
 
 main h2 {
 text-align: center;
-font-size: 0.75rem;
+font-size: 2rem;
 }
 
 main .container-box {
@@ -185,12 +183,13 @@ main .container-box {
     scrollbar-width: none;
     -ms-overflow-style: none;
     overflow-y: scroll; 
+    padding: 30px;
 }
 
 main .box {
     background-color: green;
-    width: 80px;
-    height: 80px;
+    width: 150px;
+    height: 150px;
 }
 
 
@@ -204,37 +203,73 @@ footer {
     font-size: 0.8rem;
 }
 
-/* @media (max-width: 768px){
+@media (max-width: 912px){
 
     .container {        
-        grid-template-areas: "header header" "aside main" "aside footer";
+        grid-template-areas: "header header" "aside main" "footer footer";
     }  
 
+    header img {
+        width: 12%;
+        transition: 0.25s ease;
+    }
+
+    label {
+        display: block;
+    }
+
+    main {
+        width: 100vw;
+    }
+
+    main .container-box {
+        gap: 40px;
+        padding: 25px;
+    }
+
+    main h2 {
+        font-size: 2rem;
+    }
+
+    main .box {
+        background-color: green;
+        width: 200px;
+        height: 200px;
+    }
+
     aside {
-        transform: translateX(0px);
-        width: 100%;
+        width: 0px;
+        transform: translateX(-150px);
     }
 
     .ativoAside {
-        transform: translateX(80px);
+        transform: translateX(100px);
         font-size: 1rem;
     }    
 
     .ativoMain {
-        transform: translateX(30px);
-        width: 71vw;   
+        transform: translateX(60px);
+        width: 67vw;   
         transition: 0.5s ease;
+        padding: 20px;
         
     }
 
     .ativoFooter {
-        width: 71vw;
-        transform: translateX(30px);
+        width: 68vw;
+        transform: translateX(54px);
     }
-    
 
-  
-} */
+}
+
+@media (max-width: 768px){
+
+     main h2 {
+        font-size: 1.3rem;
+    }
+
+
+}
 
 @media (max-width: 540px){
 
@@ -245,6 +280,21 @@ footer {
         
     }
     
+
+    main {
+        padding: 20px;
+    }
+
+    main .container-box {
+        gap: 20px;
+        padding: 0px;
+    }
+
+    main .box {
+        width: 120px;
+        height: 120px;
+    }
+    
     header img {
         width: 12%;
     }
@@ -253,20 +303,39 @@ footer {
         font-size: 0.85rem;
         transform: translateX(65px);
         }
+
+        .ativoMain {
+            transform: translateX(30px);
+            width: 67vw;   
+            transition: 0.5s ease;
+            padding: 20px;
+        }
+
     main h2 {
-        font-size: 1rem;
+        font-size: 1.1rem;
         line-height: 60px;
         padding-bottom: 20px;
     }
-    /* footer {
-        width: 100vh;
-    } */
-        
+        .ativoFooter {
+        width: 100vw;
+        transform: none;
+    }
+       
 }
 
 @media (max-width: 420px){
     main {
         padding: 20px;        
+    }
+
+    main h2 {
+        font-size: 1rem;
+        line-height: 30px;
+    }
+
+    main .box {
+        width: 80px;
+        height: 80px;
     }
 
     .ativoAside {
@@ -275,13 +344,17 @@ footer {
         transform: translateX(45px);
     }
 
+    .ativoMain {
+        width: 66.5vw;   
+}
     
 }
+
 
 @media (max-width: 300px){
     main h2 {
         text-align: center;
-        font-size: 0.65rem;
+        font-size: 0.70rem;
         line-height: 20px;
         padding-bottom: 20px;
     }
@@ -299,7 +372,7 @@ footer {
     }
 
     aside ul {
-    margin:23px 0 0 12px;
+    margin:37px 0 0 12px;
     }
 
 }
